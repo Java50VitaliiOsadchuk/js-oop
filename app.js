@@ -1,11 +1,11 @@
-/* HW #21 */
+/* Home work 21 */
 // Employe structure and function createEmployee() taken from previous HW
 function createEmployee(id, name, birthYear, salary, city, country) {
     return {id, name, birthYear, salary, address: {city, country}}
 }
 
 class Company {
-    #employees //object key: <id value>, value: reference to Employee object
+    #employees 
     constructor() {
         this.#employees = {};
     }
@@ -14,6 +14,7 @@ class Company {
         //adds empl into #employees object
         //returns true if added new employee object
         //returns false if employee with a given id value already exists
+
         if (this.#employees[empl.id] != undefined)
             return false; // already exists
 
@@ -24,7 +25,8 @@ class Company {
         //TODO
         //removes employee with a given id from #employees object
         //returns true if removed
-        //returns false if employee with the id doesn't exist
+        //returns false if employee with id doesn't exist
+
         if (this.#employees[id] == undefined)
             return false; // doesn't exists
 
@@ -33,7 +35,8 @@ class Company {
     }
     getEmployeesCountry(country) {
         //TODO
-        //returns array of employee objects having field "country" equal to a given country
+        //returns array of employee objects having field "country" 
+
         return Object.values(this.#employees).filter(empl => { 
             return (empl.address.country == country); 
         })
@@ -41,6 +44,7 @@ class Company {
     getEmployeesByAge(age) {
         //TODO
         //returns array of employee objects with a given age
+        
         const date = new Date();
         let y = date.getFullYear();
         return Object.values(this.#employees).filter(empl => { 
@@ -73,7 +77,7 @@ class Company {
 // Create Company instance
 let company = new Company();
 
-// Add employees
+// Add empl
 company.addEmployee(createEmployee(123, "Vasili", 2000, 15000, "Lod", "Israel"));
 company.addEmployee(createEmployee(124, "Dave", 1975, 15500, "Tel Aviv", "Israel"));
 company.addEmployee(createEmployee(125, "Sam", 1985, 20000, "New York", "USA"));
@@ -83,8 +87,8 @@ company.addEmployee(createEmployee(128, "Gosha", 1993, 10000, "Tbilisi", "Gorgia
 company.addEmployee(createEmployee(129, "Alex", 2000, 25000, "Ramat Gan", "Israel"));
 company.addEmployee(createEmployee(130, "Victoria", 2003, 10000, "Arad", "Israel"));
 
-// Try to add an employee with the same id
-// Must return false
+//employee with the same id
+//return false
 console.log(company.addEmployee(createEmployee(124, "Jonny", 1967, 16500, "Nice", "France")));
 
 console.log(company.getEmployeesCountry("Israel").length);
