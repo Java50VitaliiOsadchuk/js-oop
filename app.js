@@ -74,18 +74,18 @@ class Company {
 let company = new Company();
 
 // Add employees
-company.addEmployee(createEmployee(123, "Vasya", 2000, 15000, "Lod", "Israel"));
-company.addEmployee(createEmployee(124, "David", 1975, 15500, "Tel Aviv", "Israel"));
-company.addEmployee(createEmployee(125, "Sara", 1985, 20000, "New York", "USA"));
-company.addEmployee(createEmployee(126, "Abraham", 1990, 13000, "London", "UK"));
+company.addEmployee(createEmployee(123, "Vasili", 2000, 15000, "Lod", "Israel"));
+company.addEmployee(createEmployee(124, "Dave", 1975, 15500, "Tel Aviv", "Israel"));
+company.addEmployee(createEmployee(125, "Sam", 1985, 20000, "New York", "USA"));
+company.addEmployee(createEmployee(126, "Abram", 1990, 13000, "London", "UK"));
 company.addEmployee(createEmployee(127, "Moshe", 2000, 15000, "Rehovot", "Israel"));
-company.addEmployee(createEmployee(128, "Goga", 1993, 10000, "Tbilisi", "Gorgia"));
-company.addEmployee(createEmployee(129, "Sasha", 2000, 25000, "Ramat Gan", "Israel"));
-company.addEmployee(createEmployee(130, "Victor", 2003, 10000, "Arad", "Israel"));
+company.addEmployee(createEmployee(128, "Gosha", 1993, 10000, "Tbilisi", "Gorgia"));
+company.addEmployee(createEmployee(129, "Alex", 2000, 25000, "Ramat Gan", "Israel"));
+company.addEmployee(createEmployee(130, "Victoria", 2003, 10000, "Arad", "Israel"));
 
 // Try to add an employee with the same id
 // Must return false
-console.log(company.addEmployee(createEmployee(124, "John", 1977, 15700, "Tel Mond", "France")));
+console.log(company.addEmployee(createEmployee(124, "Jonny", 1967, 16500, "Nice", "France")));
 
 console.log(company.getEmployeesCountry("Israel").length);
 company.removeEmployee(127);
