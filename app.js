@@ -22,8 +22,7 @@ class Company {
         return true;
     }
     removeEmployee(id) {
-        //TODO
-        //removes employee with a given id from #employees object
+        //removes employee with a given id
         //returns true if removed
         //returns false if employee with id doesn't exist
 
@@ -34,7 +33,6 @@ class Company {
         return true;
     }
     getEmployeesCountry(country) {
-        //TODO
         //returns array of employee objects having field "country" 
 
         return Object.values(this.#employees).filter(empl => { 
@@ -42,7 +40,6 @@ class Company {
         })
     }
     getEmployeesByAge(age) {
-        //TODO
         //returns array of employee objects with a given age
         
         const date = new Date();
@@ -52,11 +49,10 @@ class Company {
         })
     }
     getEmployeesBySalaries(salryFrom, salryTo){ 
-        //TODO
-        //returns array of employee objects with salary in a given closed range [salaryFrom, salaryTo]
-        //if salaryFrom < 0, then get employees with salary less or equal salaryTo
-        //if salaryTo , 0, then get employees with salary greater or equal salaryFrom
-        //if salaryFrom < 0 && salaryTo < 0, then get all employees
+        //returns array of employee objects with salary in a given range [salaryFrom, salaryTo]
+        //if salaryFrom < 0, get employees with salary less or equal salaryTo
+        //if salaryTo , 0, get employees with salary greater or equal salaryFrom
+        //if salaryFrom < 0 && salaryTo < 0, get all employees
     
     
         return Object.values(this.#employees).filter(empl=>{
